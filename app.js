@@ -4,14 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     if (e.target.tagName == 'INPUT') {
       recentInput = e;
       console.log(e.target);
+      // setInterval(function() {
+      //   // recentInput.target.focus();
+      // }, 1000)
     }
   })
 
   document.getElementsByClassName('p')[0].addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
+    recentInput.target.focus();
     // console.log(e.target.tagName);
-    if (e.target.tagName == 'LI') {
+    if (e.target.tagName == 'LI' && recentInput !== undefined) {
       recentInput.target.value = recentInput.target.value + e.target.innerHTML;
     }
     // console.log(recentInput.focus());
