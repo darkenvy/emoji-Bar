@@ -1,0 +1,20 @@
+.p {
+  position: relative;
+  width: 100%;
+}
+
+ul {
+  background-color: #efffff;
+  border-bottom: 4px solid #cdd;
+  position: fixed;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  list-style: none;
+  list-style-type: none;
+}
+
+ul li {
+  display: inline;
+  cursor: pointer;
+}
