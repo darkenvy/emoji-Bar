@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementsByClassName('p')[0].addEventListener('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    recentInput.target.focus();
     // console.log(e.target.tagName);
     if (e.target.tagName == 'LI' && recentInput !== undefined) {
+      recentInput.target.focus();
       recentInput.target.value = recentInput.target.value + e.target.innerHTML;
     }
     // console.log(recentInput.focus());
